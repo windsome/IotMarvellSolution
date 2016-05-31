@@ -17,11 +17,11 @@
   参考http://openocd.org/doc/html/GDB-and-OpenOCD.html#GDB-and-OpenOCD  
   0，将开发板与电脑通过miniUSB口连接好，连接之后开发板即自动上电，运行 ``` ls /dev/ttyUSB* ```，如果看到有/dev/ttyUSB0和/dev/ttyUSB1则表示jtag连接成功，可以进行调试及后续工作。/dev/ttyUSB0是jtag口，/dev/ttyUSB1是与板子交互的串口终端。  
   1，打开一个终端，在ubuntu上用root用户运行，将打开ubuntu主机的3333(gdb),4444(telnet),6666(tcl)端口  
-    ```
+```
     $ cd IotMarvellSolution/OpenOCD  
     $ su root #回车后输入密码进入root  
     # openocd -s interface -f ftdi.cfg -f openocd.cfg  
-    ```  
+```
   2，打开一个新的终端页，使用arm-none-eabi-gdb进行调试  
     ```
     $ cd sample_apps/hello_world/bin  
