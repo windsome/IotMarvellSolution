@@ -35,7 +35,10 @@
     continue
 ```
 ### flashprog.sh使用
-  0，将开发板与电脑通过miniUSB口连接好，连接之后开发板即自动上电，运行 ``` ls /dev/ttyUSB* ```，如果看到有/dev/ttyUSB0和/dev/ttyUSB1则表示jtag连接成功，可以进行调试及后续工作。/dev/ttyUSB0是jtag口，/dev/ttyUSB1是与板子交互的串口终端。  
+  0，将开发板与电脑通过miniUSB口连接好
+    连接之后开发板即自动上电  
+    运行 ``` ls /dev/ttyUSB* ```，如果看到有/dev/ttyUSB0和/dev/ttyUSB1则表示jtag连接成功，可以进行调试及后续工作。否则可能出现问题，请检查连接情况，如实在无法解决请加QQ群联系技术人员。  
+    /dev/ttyUSB0是jtag口，/dev/ttyUSB1是与板子交互的串口终端。  
   1，用root运行flashprog.sh命令  
 ```
     $ cd IotMarvellSolution/OpenOCD
@@ -52,6 +55,6 @@
     * 6.Advanced Mode
     * q.Exit
 ```
-  2，如果要烧写某个分区可以直接敲入那个分区对应的数字，比如烧入fw，敲入2，然后输入文件所在路径  
+  2，如果要烧写某个分区可以直接敲入那个分区对应的数字，比如烧入fw，敲入2，然后输入文件所在路径，可以是相对路径，也可以是绝对路径  
   3，如果退出，直接按q  
   
